@@ -1,0 +1,39 @@
+.SetMFA {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.leftSide {
+    width: 35%;
+    padding: 0px 40px;
+    display: flex;
+}
+
+
+.rightSide {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.container {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buttonContainer{
+    width: 80%;
+}

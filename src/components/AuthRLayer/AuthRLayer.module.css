@@ -1,0 +1,26 @@
+.rightSide {
+  width: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/src/images/adfeed_bg.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  color: rgb(63, 63, 142);
+}
+
+.heading {
+  font-size: 60px;
+  color: white;
+}
+
+.desc {
+  font-size: 18px;
+  width: 70%;
+  align-self: start;
+  color: white;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+}

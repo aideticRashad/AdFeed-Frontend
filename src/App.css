@@ -1,0 +1,21 @@
+.App {
+  height: 100vh;
+}
+
+.spinner-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999
+}
+
+.spinner-border {
+  width: 5rem;
+  height: 5rem;
+}
