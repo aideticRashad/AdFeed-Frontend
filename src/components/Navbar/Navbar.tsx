@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Navbar.module.css'
-import { person } from '../../data/userData';
+import { person } from '../../constants/userData';
 
 interface Props {
   title: string;

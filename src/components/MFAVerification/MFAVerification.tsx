@@ -47,7 +47,7 @@ function MFAVerification({ type, setType }: AuthLLayerArgs) {
 
   return (
     <>
-      <form className={styles.MFAVerification}>
+      <form className={styles.MFAVerification} onSubmit={handleSubmit}>
         <h6 >
           {`Please enter the 6 digit code of your Microsoft authenticator app`}
         </h6>
@@ -118,8 +118,8 @@ function MFAVerification({ type, setType }: AuthLLayerArgs) {
           </div>
         </div>
         <div className='d-flex flex-column gap-4 mt-4'>
-          <CustomButton title='Verify OTP' style={{ backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} onClick={handleSubmit} />
-          <CustomButton title='Back' variant='outlined' style={{ color: "#FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => setType("Login")} />
+          <CustomButton type="submit" title='Verify OTP' style={{ backgroundColor: " #FF5E06", color: "white" }} fullWidth={true} />
+          <CustomButton type="button" title='Back' variant='outlined' style={{ color: "#FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => setType("Login")} />
         </div>
       </form>
     </>

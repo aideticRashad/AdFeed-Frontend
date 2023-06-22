@@ -34,8 +34,8 @@ const SetMFA = () => {
                                 </li>
                             </ol>
                             <div className='d-flex flex-column gap-4 mt-4'>
-                                <CustomButton title='Finish Setup' style={{ backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} onClick={() => { toast.info("Are you sure you have successfully scanned the QR on your smartphone.") }} />
-                                <CustomButton title='Back' variant='outlined' style={{ color: "#FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => navigate("/")} />
+                                <CustomButton type="button" title='Finish Setup' style={{ backgroundColor: " #FF5E06", color: "white" }} fullWidth={true} onClick={() => { toast.info("Are you sure you have successfully scanned the QR on your smartphone.") }} />
+                                <CustomButton type="button" title='Back' variant='outlined' style={{ color: "#FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => navigate("/")} />
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ const SetMFA = () => {
                 <div className={styles.container}>
                     <img src={QR} alt="QR Code" style={{ height: "28rem" }} />
                     <div className={styles.buttonContainer}>
-                        <CustomButton title='Finish Setup' style={{ backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} onClick={() => { toast.info("Are you sure you have successfully scanned the QR on your smartphone.") }} />
+                        <CustomButton type="button" title='Finish Setup' style={{ backgroundColor: " #FF5E06", color: "white" }} fullWidth={true} onClick={() => { toast.info("Are you sure you have successfully scanned the QR on your smartphone.") }} />
                     </div>
                 </div>
             </div>

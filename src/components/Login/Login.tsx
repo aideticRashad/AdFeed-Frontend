@@ -7,6 +7,7 @@ import { FormEvent, useState } from 'react';
 import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import InputField from '../InputField/InputField';
+import { toast } from 'react-toastify';
 
 
 const Login = ({ type, setType }: AuthLLayerArgs) => {
@@ -39,7 +40,10 @@ const Login = ({ type, setType }: AuthLLayerArgs) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log(formData, 'asdaa')
-    // setType("SetUpMFA")
+    if (formData.password.length < 8) {
+      return toast.error("Password must be 8 characters long")
+    }
+    setType("SetUpMFA")
     // console.log(formData, 'formData');
     // dispatch(showLoading());
     // loginFunction(formData).then((res: any) => {
@@ -61,34 +65,12 @@ const Login = ({ type, setType }: AuthLLayerArgs) => {
   return (
     <>
       <h4 className={styles.title}>Nice to see you again.</h4>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className={styles.inputContainer}>
-          {/* <label className={styles.infoLabel} htmlFor="email">Email*</label>
-          <input
-            type="email"
-            placeholder="abcd@qwerty.com"
-            className={styles.infoInput}
-            name="email"
-            onChange={(e) => { setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value })) }}
-            required
-          /> */}
-          <InputField fullWidth={true} label='Email' name='email' sx={{ backgroundColor: "#e1e0e0" }} onChange={(e: any) => setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))} />
+          <InputField fullWidth={true} label='Email' name='email' sx={{ backgroundColor: "#ededed" }} onChange={(e: any) => setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))} />
         </div>
 
         <div className={styles.inputContainer}>
-          {/* <label className={styles.infoLabel} htmlFor="password">Password*</label>
-          <div className='d-flex align-items-center'>
-            <input
-              type="password"
-              placeholder="Min. 8 characters"
-              className={styles.infoInput}
-              id='password'
-              name="password"
-              onChange={(e) => { setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value })) }}
-              required
-            />
-            {passVisibility ? (<VisibilityOffIcon onClick={handlePassVisibility} className={styles.faIcon} />) : (<VisibilityIcon onClick={handlePassVisibility} className={styles.faIcon} />)}
-          </div> */}
           <FormControl variant="outlined" size="small">
             <InputLabel htmlFor="password">Password</InputLabel>
             <OutlinedInput
@@ -108,7 +90,8 @@ const Login = ({ type, setType }: AuthLLayerArgs) => {
               }
               onChange={(e: any) => setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))}
               label="Password"
-              sx={{ backgroundColor: "#e1e0e0" }}
+              name='password'
+              sx={{ backgroundColor: "#ededed" }}
               fullWidth
             />
           </FormControl>
@@ -118,7 +101,7 @@ const Login = ({ type, setType }: AuthLLayerArgs) => {
         </div>
 
         <div className="d-grid gap-2">
-          <CustomButton variant='contained' style={{ width: "100%", backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} title={"Continue"} onClick={handleSubmit} />
+          <CustomButton type="submit" variant='contained' style={{ width: "100%", backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} title={"Continue"} />
         </div>
       </form>
     </>

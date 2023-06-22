@@ -36,14 +36,14 @@ const ResetPassword = () => {
     }
 
     const handleSubmit = (e: FormEvent) => {
-        console.log(formData,'formData')
+        console.log(formData, 'formData')
     }
     return (
         <div className={styles.ResetPassword}>
             <h4 className={styles.title}>
                 Forgot Password
             </h4>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
                 <div className={styles.inputContainer}>
                     <label className={styles.infoLabel} htmlFor="password">New Password</label>
                     <div className='d-flex align-items-center'>
@@ -75,8 +75,8 @@ const ResetPassword = () => {
                     </div>
                 </div>
                 <div className='d-flex flex-column gap-4 mt-4'>
-                    <CustomButton title='Continue & Setup MFA' style={{ backgroundColor: "#FF5E06", color: "white" }} fullWidth={true} onClick={handleSubmit} />
-                    <CustomButton title='Back' variant='outlined' style={{ color: "#FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => console.log("Back")} />
+                    <CustomButton type="submit" title='Continue & Setup MFA' style={{ backgroundColor: " #FF5E06", color: "white" }} fullWidth={true} />
+                    <CustomButton type="button" title='Back' variant='outlined' style={{ color: " #FF5E06", outline: "1px solid #FF5E06", border: "none" }} fullWidth={true} onClick={() => console.log("Back")} />
                 </div>
             </form>
         </div>

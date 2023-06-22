@@ -38,6 +38,7 @@ function App() {
           <Route path="/get-started" element={<Auth />} />
           <Route path="/set-mfa" element={<SetMFA />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/admin/home" element={<Home />} />
           <Route path="/admin/upload" element={<FileUpload />} />
           <Route path="/admin/folders" element={<Folders />} />
           <Route path="/admin/users" element={<UserManagement />} />

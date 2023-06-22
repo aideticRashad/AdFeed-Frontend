@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Sidebar.module.css'
 import Logo from '../../images/adFeed_logo.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import TocIcon from '@mui/icons-material/Toc';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
 import PersonIcon from '@mui/icons-material/Person';
+import HomeIcon from '@mui/icons-material/Home';
 
 type SidebarProps = {
   user: number
@@ -18,16 +18,16 @@ const Sidebar = ({ user }: SidebarProps) => {
     {
       name: "Home",
       path: "/home",
-      iconActive: <TocIcon sx={{ color: "white" }} />,
-      iconNotActive: <TocIcon sx={{ color: "#FF5E06" }} />
+      iconActive: <HomeIcon sx={{ color: "white" }} />,
+      iconNotActive: <HomeIcon sx={{ color: "#FF5E06" }} />
     },
   ];
   const adminMenu = [
     {
       name: "Dashboard",
-      path: "/home",
-      iconActive: <TocIcon sx={{ color: "white" }} />,
-      iconNotActive: <TocIcon sx={{ color: "#FF5E06" }} />
+      path: "/admin/home",
+      iconActive: <HomeIcon sx={{ color: "white" }} />,
+      iconNotActive: <HomeIcon sx={{ color: "#FF5E06" }} />
     },
     {
       name: "Upload File",
@@ -45,9 +45,9 @@ const Sidebar = ({ user }: SidebarProps) => {
   const superAdminMenu = [
     {
       name: "Dashboard",
-      path: "/dashboard",
-      iconActive: <TocIcon sx={{ color: "white" }} />,
-      iconNotActive: <TocIcon sx={{ color: "#FF5E06" }} />
+      path: "/admin/home",
+      iconActive: <HomeIcon sx={{ color: "white" }} />,
+      iconNotActive: <HomeIcon sx={{ color: "#FF5E06" }} />
     },
     {
       name: "Upload File",
